@@ -1,0 +1,18 @@
+{
+  "name": "wbdv-sp20-server-node",
+  "version": "1.0.0",
+  "description": "Node Server Application for WebDev Spring 2020\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D CS5610 Spring 2020",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node",
+    "express"
+  ],
+  "author": "Swapnil Bhaumik",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
