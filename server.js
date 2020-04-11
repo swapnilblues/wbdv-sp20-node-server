@@ -5,9 +5,17 @@ var bodyParser = require('body-parser')
 app.use(bodyParser.urlencoded({extended : false}))
 app.use(bodyParser.json())
 
+
+const CLOUD_RB_URI = 'mongodb+srv://root:rootroot@whiteboard-xifbs.mongodb.net/whiteboard-cs5610-sp20?retryWrites=true&w=majority'
+const LOCAL_DB_URI = 'mongodb://localhost:27017/whiteboard-cs5610-sp20'
+
 const mongoose = require('mongoose')
-mongoose.connect('mongodb://localhost:27017/whiteboard-cs5610-sp20',
+mongoose.connect(CLOUD_RB_URI,
     {useNewUrlParser: true, useUnifiedTopology: true})
+
+mongoose.connection.on('connected', () => {
+    console.log('Connected to DB')
+})
 
 
 app.use(function (req, res, next) {
